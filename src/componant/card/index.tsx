@@ -1,5 +1,6 @@
 import React, {FC, ReactNode} from 'react';
 import {View, ViewStyle} from 'react-native';
+import styles from './styles';
 
 interface ICard {
   children: React.ReactNode;
@@ -28,7 +29,7 @@ interface ICardComponent extends React.FC<ICard> {
 }
 
 const Card: ICardComponent = ({children, style}) => {
-  return <View style={[style]}>{children}</View>;
+  return <View style={[style, styles.card]}>{children}</View>;
 };
 
 Card.Header = ({children, style}: IHeader) => {
